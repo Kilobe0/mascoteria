@@ -12,14 +12,14 @@ const Header = () => {
   // que controla tanto a Navbar quanto o seletor de idioma.
   const navTexts = {
     pt: {
-      products: 'Produtos',
-      about: 'Sobre Nós',
-      contact: 'Contato',
+      products: 'PORTIFÓLIO',
+      about: 'SOBRE NÓS',
+      contact: 'ORÇAMENTOS',
     },
     en: {
-      products: 'Products',
-      about: 'About Us',
-      contact: 'Contact',
+      products: 'PORTFOLIO',
+      about: 'ABOUT US',
+      contact: 'QUOTES',
     },
   };
 
