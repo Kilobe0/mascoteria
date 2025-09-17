@@ -28,7 +28,7 @@ export const mockProducts: Product[] = [
   { id: 3, name: 'Osso Mastigável de Couro', imageUrl: '/images/gallery/mock2.jpg', categorySlug: 'petiscos' },
   { id: 4, name: 'Shampoo Neutro Pelos Claros', imageUrl: '/images/gallery/mock3.jpg', categorySlug: 'higiene' },
   { id: 5, name: 'Ração Premier Ambientes Internos', imageUrl: '/images/gallery/mock4.jpg', categorySlug: 'racoes' },
-  { id: 6, name: 'Coleira de Couro', imageUrl: 'https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=500&auto=format&fit=crop', categorySlug: 'acessorios' }, 
+  { id: 6, name: 'Coleira de Couro', imageUrl: 'https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=500&auto=format&fit=crop', categorySlug: 'acessorios, racoes' }, 
 ];
 
 // 3. Função para contar produtos por categoria

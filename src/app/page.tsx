@@ -18,7 +18,7 @@ export default function GalleryPage() {
   const categoriesWithCounts = categories.map(category => ({
     ...category,
     count: productCounts[category.slug] || 0, // Garante que a contagem seja 0 se não houver produtos
-  }));
+  })).filter(category => category.count > 0); // Filtra categorias sem produtos
 
   // Estado para a categoria ativa e para os produtos filtrados
   const [activeCategory, setActiveCategory] = useState<string>('all');

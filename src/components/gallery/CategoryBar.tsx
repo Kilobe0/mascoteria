@@ -24,7 +24,7 @@ const CategoryBar: React.FC<CategoryBarProps> = ({
     <div className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 justify-center flex">
         {/* Usamos flex e overflow-x-auto para permitir rolagem horizontal em telas pequenas */}
-        <div className="flex items-center space-x-2 sm:space-x-4 py-4 overflow-x-auto whitespace-nowrap">
+        <div className="flex flex-wrap items-center gap-4 py-4">
           {/* Botão "Todas" para limpar o filtro */}
           <button
             onClick={() => onSelectCategory("all")}
