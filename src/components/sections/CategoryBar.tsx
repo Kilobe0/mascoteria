@@ -37,7 +37,7 @@ const CategoryBar: React.FC<CategoryBarProps> = ({
               }
             `}
           >
-            Todas
+            TODOS
           </button>
 
           {/* Mapeia as categorias para criar um botão para cada uma */}
@@ -54,7 +54,7 @@ const CategoryBar: React.FC<CategoryBarProps> = ({
                 }
               `}
             >
-              <span>{category.name}</span>
+              <span>{category.name} </span>
               {/* Adicionado aqui: Exibe a contagem se ela existir e for maior que zero */}
               {category.count && category.count > 0 && (
                 <span className={`text-xs px-2 py-0.5 rounded-full ${activeCategory === category.slug ? 'bg-orange-400' : 'bg-gray-200'}`}>
