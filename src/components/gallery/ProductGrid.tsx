@@ -16,12 +16,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
   }
 
   return (
-    // Aqui está o grid responsivo
-    // - Mobile: 1 coluna (padrão)
-    // - Telas Médias (md): 2 colunas
-    // - Telas Grandes (lg): 4 colunas
-    // - gap-6 define o espaçamento entre os cards
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+    <div className="columns-1 md:columns-2 lg:columns-4 gap-6 space-y-6">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
