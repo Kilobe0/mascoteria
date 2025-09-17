@@ -43,7 +43,7 @@ export default function GalleryPage() {
         onSelectCategory={setActiveCategory}
       />
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="w-full px-6 md:px-12 py-8">
         <h1 className="text-3xl font-bold mb-6">Nossos Produtos</h1>
         <ProductGrid products={filteredProducts} />
       </div>
