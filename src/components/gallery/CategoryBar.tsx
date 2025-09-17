@@ -1,4 +1,4 @@
-// src/components/common/CategoryBar.tsx
+// src/components/gallery/CategoryBar.tsx
 "use client";
 
 // Tipo para definir a estrutura de um objeto de categoria

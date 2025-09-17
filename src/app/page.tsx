@@ -1,23 +1,52 @@
-// src/app/page.tsx
-import Link from 'next/link';
+// app/page.tsx
+'use client';
 
-export default function HomePage() {
+import { useState, useEffect } from 'react';
+import CategoryBar from '@/components/gallery/CategoryBar';
+import ProductGrid from '@/components/gallery/ProductGrid';
+import { mockCategories, mockProducts, getProductCounts } from '@/lib/data';
+
+export default function GalleryPage() {
+  // Pega os dados brutos
+  const products = mockProducts;
+  const categories = mockCategories;
+
+  // Calcula a contagem de produtos para cada categoria
+  const productCounts = getProductCounts(products);
+
+  // Adiciona a contagem ao objeto de cada categoria
+  const categoriesWithCounts = categories.map(category => ({
+    ...category,
+    count: productCounts[category.slug] || 0, // Garante que a contagem seja 0 se não houver produtos
+  }));
+
+  // Estado para a categoria ativa e para os produtos filtrados
+  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [filteredProducts, setFilteredProducts] = useState(products);
+
+  // Lógica para filtrar os produtos quando a categoria ativa muda
+  useEffect(() => {
+    if (activeCategory === 'all') {
+      setFilteredProducts(products);
+    } else {
+      setFilteredProducts(
+        products.filter(product => product.categorySlug === activeCategory)
+      );
+    }
+  }, [activeCategory, products]); // Adicione `products` como dependência
+
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen text-center p-8">
-      <div className="max-w-2xl">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-4">
-          Bem-vindo à Mascoteria
-        </h1>
-        <p className="text-lg text-gray-600 mb-8">
-          O melhor lugar para encontrar tudo o que seu pet precisa. Explore nossa vasta seleção de produtos de alta qualidade.
-        </p>
-        <Link
-          href="/gallery"
-          className="inline-block bg-orange-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-orange-600 transition-transform transform hover:scale-105 shadow-lg"
-        >
-          Ver Produtos
-        </Link>
+    <div>
+      <CategoryBar
+        categories={categoriesWithCounts}
+        activeCategory={activeCategory}
+        onSelectCategory={setActiveCategory}
+      />
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 className="text-3xl font-bold mb-6">Nossos Produtos</h1>
+        <ProductGrid products={filteredProducts} />
       </div>
-    </main>
+    </div>
   );
 }

@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ language, navTexts }) => {
     <nav className="hidden md:block">
       <ul className="flex items-center space-x-8">
         <li>
-          <Link href="/produtos" className="text-gray-600 hover:text-orange-500 transition-colors duration-200 font-medium">
+          <Link href="/" className="text-gray-600 hover:text-orange-500 transition-colors duration-200 font-medium">
             {/* Usamos as props para obter o texto correto */}
             {navTexts[language].products}
           </Link>
