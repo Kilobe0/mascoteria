@@ -24,15 +24,15 @@ export const mockCategories: Category[] = [
 
 export const mockProducts: Product[] = [
   { id: 1, name: 'Ração Golden Power Training', imageUrl: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=500&auto=format&fit=crop', categorySlug: 'racoes' },
-  { id: 2, name: 'Bolinha de Tênis para Cães', imageUrl: 'https://images.unsplash.com/photo-1599481313361-b66970a04c8f?w=500&auto=format&fit=crop', categorySlug: 'brinquedos' },
-  { id: 3, name: 'Osso Mastigável de Couro', imageUrl: 'https://images.unsplash.com/photo-1601758176539-76077ad7512d?w=500&auto=format&fit=crop', categorySlug: 'petiscos' },
-  { id: 4, name: 'Shampoo Neutro Pelos Claros', imageUrl: 'https://images.unsplash.com/photo-1556856543-0857112f4b8a?w=500&auto=format&fit=crop', categorySlug: 'higiene' },
-  { id: 5, name: 'Ração Premier Ambientes Internos', imageUrl: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&auto=format&fit=crop', categorySlug: 'racoes' },
+  { id: 2, name: 'Bolinha de Tênis para Cães', imageUrl: '/images/gallery/mock1.jpg', categorySlug: 'brinquedos' },
+  { id: 3, name: 'Osso Mastigável de Couro', imageUrl: '/images/gallery/mock2.jpg', categorySlug: 'petiscos' },
+  { id: 4, name: 'Shampoo Neutro Pelos Claros', imageUrl: '/images/gallery/mock3.jpg', categorySlug: 'higiene' },
+  { id: 5, name: 'Ração Premier Ambientes Internos', imageUrl: '/images/gallery/mock4.jpg', categorySlug: 'racoes' },
   { id: 6, name: 'Antipulgas e Carrapatos', imageUrl: 'https://images.unsplash.com/photo-1596791692842-5321f55a151b?w=500&auto=format&fit=crop', categorySlug: 'farmacia' },
   { id: 7, name: 'Corda de Puxar Resistente', imageUrl: 'https://images.unsplash.com/photo-1565780302839-a91a9b2f6b30?w=500&auto=format&fit=crop', categorySlug: 'brinquedos' },
   { id: 8, name: 'Bifinho Sabor Carne', imageUrl: 'https://images.unsplash.com/photo-1615838209823-35b85a3c6130?w=500&auto=format&fit=crop', categorySlug: 'petiscos' },
   { id: 9, name: 'Ração Seca para Gatos', imageUrl: 'https://images.unsplash.com/photo-1592194993183-4a00f87a3899?w=500&auto=format&fit=crop', categorySlug: 'racoes' },
-  { id: 10, name: 'Coleira de Couro', imageUrl: 'https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=500&auto=format&fit=crop', categorySlug: 'acessorios' }, // Adicionei um para exemplo
+  { id: 10, name: 'Coleira de Couro', imageUrl: 'https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=500&auto=format&fit=crop', categorySlug: 'acessorios' }, 
 ];
 
 // 3. Função para contar produtos por categoria
