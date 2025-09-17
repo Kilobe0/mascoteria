@@ -21,7 +21,7 @@ const CategoryBar: React.FC<CategoryBarProps> = ({
   onSelectCategory,
 }) => {
   return (
-    <div className="bg-gray-50 border-b border-gray-200">
+    <div className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 justify-center flex">
         {/* Usamos flex e overflow-x-auto para permitir rolagem horizontal em telas pequenas */}
         <div className="flex items-center space-x-2 sm:space-x-4 py-4 overflow-x-auto whitespace-nowrap">

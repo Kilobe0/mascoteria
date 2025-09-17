@@ -28,11 +28,7 @@ export const mockProducts: Product[] = [
   { id: 3, name: 'Osso Mastigável de Couro', imageUrl: '/images/gallery/mock2.jpg', categorySlug: 'petiscos' },
   { id: 4, name: 'Shampoo Neutro Pelos Claros', imageUrl: '/images/gallery/mock3.jpg', categorySlug: 'higiene' },
   { id: 5, name: 'Ração Premier Ambientes Internos', imageUrl: '/images/gallery/mock4.jpg', categorySlug: 'racoes' },
-  { id: 6, name: 'Antipulgas e Carrapatos', imageUrl: 'https://images.unsplash.com/photo-1596791692842-5321f55a151b?w=500&auto=format&fit=crop', categorySlug: 'farmacia' },
-  { id: 7, name: 'Corda de Puxar Resistente', imageUrl: 'https://images.unsplash.com/photo-1565780302839-a91a9b2f6b30?w=500&auto=format&fit=crop', categorySlug: 'brinquedos' },
-  { id: 8, name: 'Bifinho Sabor Carne', imageUrl: 'https://images.unsplash.com/photo-1615838209823-35b85a3c6130?w=500&auto=format&fit=crop', categorySlug: 'petiscos' },
-  { id: 9, name: 'Ração Seca para Gatos', imageUrl: 'https://images.unsplash.com/photo-1592194993183-4a00f87a3899?w=500&auto=format&fit=crop', categorySlug: 'racoes' },
-  { id: 10, name: 'Coleira de Couro', imageUrl: 'https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=500&auto=format&fit=crop', categorySlug: 'acessorios' }, 
+  { id: 6, name: 'Coleira de Couro', imageUrl: 'https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=500&auto=format&fit=crop', categorySlug: 'acessorios' }, 
 ];
 
 // 3. Função para contar produtos por categoria
