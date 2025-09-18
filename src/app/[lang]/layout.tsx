@@ -1,8 +1,9 @@
-// src/app/layout.tsx
+// src/app/[lang]/layout.tsx
 
 import '@/components/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { getDictionary, Dictionary } from '@/lib/dictionaries';
 
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
@@ -16,20 +17,23 @@ export const metadata: Metadata = {
   description: 'Prototipo',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ lang: 'pt-BR' | 'en-US' }>;
 }) {
+  const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   return (
-    <html lang="pt-BR">
+    <html lang={lang}>
       
-      {/* A tag <body> agora envolve todo o conteúdo visível */}
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex flex-cow flex-grow">
+          <Header lang={lang} dict={dict} />
+          <main className="flex flex-col flex-grow">
             {children}
           </main>
           <Footer />

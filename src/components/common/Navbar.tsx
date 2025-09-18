@@ -1,40 +1,36 @@
 // src/components/common/Navbar.tsx
 import Link from 'next/link';
+import { Dictionary } from '@/lib/dictionaries';
 
-// Definimos os tipos para as props que o Navbar vai receber
-interface NavTexts {
-  products: string;
+// 1. Nova interface de props, muito mais simples
+interface NavLinks {
+  home: string;
+  budgets: string;
   about: string;
-  contact: string;
 }
 
 interface NavbarProps {
-  language: 'pt' | 'en';
-  navTexts: {
-    pt: NavTexts;
-    en: NavTexts;
-  };
+  dict: Dictionary['navbar']; // Recebe apenas a parte do dicionário que lhe interessa
+  links: NavLinks;            // Recebe os links já construídos
 }
 
-const Navbar: React.FC<NavbarProps> = ({ language, navTexts }) => {
+const Navbar: React.FC<NavbarProps> = ({ dict, links }) => {
   return (
-    // Escondemos a navbar em telas menores (md:block)
     <nav className="hidden md:block">
       <ul className="flex items-center space-x-8">
         <li>
-          <Link href="/" className="text-gray-600 hover:text-orange-500 transition-colors duration-200 font-medium">
-            {/* Usamos as props para obter o texto correto */}
-            {navTexts[language].products}
+          <Link href={links.home} className="text-gray-600 hover:text-orange-500 transition-colors duration-200 font-medium">
+            {dict.home}
           </Link>
         </li>
         <li>
-          <Link href="/sobre" className="text-gray-600 hover:text-orange-500 transition-colors duration-200 font-medium">
-            {navTexts[language].about}
+          <Link href={links.about} className="text-gray-600 hover:text-orange-500 transition-colors duration-200 font-medium">
+            {dict.about}
           </Link>
         </li>
         <li>
-          <Link href="/contato" className="text-gray-600 hover:text-orange-500 transition-colors duration-200 font-medium">
-            {navTexts[language].contact}
+          <Link href={links.budgets} className="text-gray-600 hover:text-orange-500 transition-colors duration-200 font-medium">
+            {dict.budgets}
           </Link>
         </li>
       </ul>

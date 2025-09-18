@@ -1,0 +1,22 @@
+{
+  "navbar": {
+    "home": "PORTIFÓLIO",
+    "about": "SOBRE NÓS",
+    "budgets": "ORÇAMENTOS"
+  },
+  "orderPage": {
+    "title": "CADASTRE-SE AQUI E RECEBA UM ORÇAMENTO COMPLETO",
+    "subtitle": "Preencha os campos abaixo...",
+    "form": {
+      "name": "Nome*",
+      "email": "Email*",
+      "emailHelper": "Seu melhor email",
+      "company": "Empresa",
+      "button": "quero um orçamento"
+    }
+  },
+  "aboutPage": { 
+    "title": "Sobre a Mascoteria",
+    "description": "Somos um estúdio apaixonado por dar vida a personagens e mascotes incríveis. Nossa missão é criar conexões emocionais através da arte e do design."
+  }
+}

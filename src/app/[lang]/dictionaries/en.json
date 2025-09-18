@@ -1,0 +1,22 @@
+{
+  "navbar": {
+    "home": "PORTFOLIO",
+    "about": "ABOUT US",
+    "budgets": "QUOTES"
+  },
+  "orderPage": {
+    "title": "REGISTER HERE AND RECEIVE A COMPLETE QUOTE",
+    "subtitle": "Fill in the fields below...",
+    "form": {
+      "name": "Name*",
+      "email": "Email*",
+      "emailHelper": "Your best email",
+      "company": "Company",
+      "button": "I want a quote"
+    }
+  },
+  "aboutPage": {
+    "title": "About Mascoteria",
+    "description": "We are a passionate studio dedicated to bringing incredible characters and mascots to life. Our mission is to create emotional connections through art and design."
+  }
+}
