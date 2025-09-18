@@ -43,7 +43,7 @@ export default function GalleryPage() {
         onSelectCategory={setActiveCategory}
       />
       
-      <div className="w-full px-6 md:px-12">
+      <div className="w-full px-0 md:px-12">
         <ProductGrid products={filteredProducts} />
       </div>
     </div>
