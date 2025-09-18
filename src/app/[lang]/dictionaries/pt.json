@@ -6,14 +6,16 @@
   },
   "orderPage": {
     "title": "CADASTRE-SE AQUI E RECEBA UM ORÇAMENTO COMPLETO",
-    "subtitle": "Preencha os campos abaixo...",
+    "subtitle": "Preencha os campos abaixo para cadastrar seu e-mail e receber nossa tabela de informações e valores!",
     "form": {
       "name": "Nome*",
       "email": "Email*",
       "emailHelper": "Seu melhor email",
       "company": "Empresa",
-      "button": "quero um orçamento"
-    }
+      "button": "Quero um orçamento"
+    },
+    "contactPortfolio": "Adoramos conhecer novos artistas, envie seu portfolio com assunto que representa sua especialidade. Ex: Portfolio - Modelador 3D",
+    "contactGeneral": "Para demais assuntos envie e-mail para:"
   },
   "aboutPage": { 
     "title": "Sobre a Mascoteria",

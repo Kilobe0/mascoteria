@@ -1,32 +1,35 @@
 // src/components/forms/OrderForm.tsx
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Dictionary } from '@/lib/dictionaries';
+import { useState } from "react";
+import { Dictionary } from "@/lib/dictionaries";
 
 // O formulário recebe apenas a parte do dicionário que ele precisa
 interface OrderFormProps {
-  dict: Dictionary['orderPage']['form'];
+  dict: Dictionary["orderPage"]["form"];
 }
 
 const OrderForm: React.FC<OrderFormProps> = ({ dict }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [company, setCompany] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log({ name, email, company });
-    alert('Obrigado! Seus dados foram enviados.');
-    setName('');
-    setEmail('');
-    setCompany('');
+    alert("Obrigado! Seus dados foram enviados.");
+    setName("");
+    setEmail("");
+    setCompany("");
   };
 
   return (
     <form onSubmit={handleSubmit} className="mt-8 space-y-5">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-gray-700"
+        >
           {dict.name}
         </label>
         <input
@@ -40,22 +43,28 @@ const OrderForm: React.FC<OrderFormProps> = ({ dict }) => {
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-gray-700"
+        >
           {dict.email}
         </label>
         <input
           type="email"
           id="email"
+          placeholder={dict.emailHelper}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
           className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500"
         />
-        <p className="mt-1 text-xs text-gray-500">{dict.emailHelper}</p>
       </div>
 
       <div>
-        <label htmlFor="company" className="block text-sm font-medium text-gray-700">
+        <label
+          htmlFor="company"
+          className="block text-sm font-medium text-gray-700"
+        >
           {dict.company}
         </label>
         <input
@@ -67,12 +76,14 @@ const OrderForm: React.FC<OrderFormProps> = ({ dict }) => {
         />
       </div>
 
-      <button
-        type="submit"
-        className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
-      >
-        {dict.button}
-      </button>
+      <div className="flex justify-center">
+        <button
+          type="submit"
+          className="flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+        >
+          {dict.button}
+        </button>
+      </div>
     </form>
   );
 };

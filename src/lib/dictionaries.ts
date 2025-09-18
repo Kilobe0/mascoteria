@@ -17,6 +17,8 @@ export type Dictionary = {
       company: string;
       button: string;
     };
+        contactPortfolio: string;
+    contactGeneral: string;
   };
   aboutPage: {
     title: string;

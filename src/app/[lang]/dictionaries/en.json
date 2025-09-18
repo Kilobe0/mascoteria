@@ -13,7 +13,9 @@
       "emailHelper": "Your best email",
       "company": "Company",
       "button": "I want a quote"
-    }
+    },
+    "contactPortfolio": "We love to meet new artists, send your portfolio with a subject that represents your specialty. Ex: Portfolio – 3D Modeler",
+    "contactGeneral": "For other matters, send an email to:"
   },
   "aboutPage": {
     "title": "About Mascoteria",
