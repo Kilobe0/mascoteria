@@ -7,6 +7,7 @@ import { Inter } from 'next/font/google';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import CopyrightImage from '@/components/common/CopyrightImage';
+import WhatsAppButton from '@/components/common/WhatsappButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -33,7 +34,10 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+
         <CopyrightImage />
+        
+        <WhatsAppButton phoneNumber="5511999999999" />
       </body>
     </html>
   );
