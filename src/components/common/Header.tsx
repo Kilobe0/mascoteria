@@ -1,7 +1,6 @@
 // src/components/common/Header.tsx
 'use client';
 
-import { useState } from 'react';
 import { Dictionary } from '@/lib/dictionaries';
 import Link from 'next/link';
 import Image from 'next/image';

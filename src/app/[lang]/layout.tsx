@@ -3,7 +3,7 @@
 import '@/components/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { getDictionary, Dictionary } from '@/lib/dictionaries';
+import { getDictionary } from '@/lib/dictionaries';
 
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
