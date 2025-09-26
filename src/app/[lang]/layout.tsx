@@ -12,6 +12,10 @@ import WhatsAppButton from '@/components/common/WhatsappButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export async function generateStaticParams() {
+  return [{ lang: 'pt-BR' }, { lang: 'en-US' }];
+}
+
 export const metadata: Metadata = {
   title: 'Mascoteria Clone',
   description: 'Prototipo',
@@ -22,17 +26,17 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang: 'pt-BR' | 'en-US' }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const dict = await getDictionary(lang as 'pt-BR' | 'en-US');
 
   return (
     <html lang={lang}>
       
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
-          <Header lang={lang} dict={dict} />
+          <Header lang={lang as 'pt-BR' | 'en-US'} dict={dict} />
           <main className="flex flex-col flex-grow">
             {children}
           </main>
