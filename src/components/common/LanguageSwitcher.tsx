@@ -3,6 +3,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface LanguageSwitcherProps {
   lang: 'pt-BR' | 'en-US';
@@ -46,19 +47,29 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ lang }) => {
       {/* Botão Português */}
       <Link
         href={ptUrl}
-        className={`p-1 rounded-full transition-opacity duration-200 ${lang === 'pt-BR' ? 'opacity-100 ring-2 ring-orange-500' : 'opacity-50 hover:opacity-100'}`}
+        className={`p-1 transition-opacity duration-200 ${lang === 'pt-BR' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
         aria-label="Mudar idioma para Português"
       >
-        <span className="text-xl">🇧🇷</span>
+        <Image
+          src="/images/flags/pt-br.svg"
+          alt="Português"
+          width={24}
+          height={18}
+        />
       </Link>
       
       {/* Botão Inglês */}
       <Link
         href={enUrl}
-        className={`p-1 rounded-full transition-opacity duration-200 ${lang === 'en-US' ? 'opacity-100 ring-2 ring-orange-500' : 'opacity-50 hover:opacity-100'}`}
+        className={`p-1 transition-opacity duration-200 ${lang === 'en-US' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
         aria-label="Change language to English"
       >
-        <span className="text-xl">🇺🇸</span>
+        <Image
+          src="/images/flags/en.svg"
+          alt="English"
+          width={24}
+          height={18}
+        />
       </Link>
     </div>
   );
