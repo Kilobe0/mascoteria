@@ -16,7 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     // O 'group' é a mágica que permite o hover em todo o card afetar elementos filhos
     <Link
-      href={`/produtos/${product.id}`}
+      href={`/produto/${product.id}`}
       className="group relative block overflow-hidden break-inside-avoid mb-6"
     >
       {/* Container da Imagem com Aspect Ratio */}
